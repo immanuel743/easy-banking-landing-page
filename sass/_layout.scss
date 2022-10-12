@@ -1,0 +1,284 @@
+// .nav {
+//   height: 5rem;
+//   background-color: $White;
+//   position: relative;
+//   z-index: 10;
+//   padding: 1rem;
+//   &__container {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
+//   &__item {
+//     @media screen and (max-width: 1440px) {
+//       position: relative;
+//       max-width: 40%;
+//       top: 0;
+//       left: 0;
+//       transform: none;
+//       border-radius: 0;
+//       background-color: inherit;
+//       display: inline-block;
+//       box-shadow: none;
+//       display: inline-block;
+//       padding: 0;
+//     }
+//     @media screen and (max-width: 600px) {
+//       position: absolute;
+//       top: 7rem;
+//       left: 50%;
+//       transform: translate(-50%, 0);
+//       background-color: $White;
+//       max-width: 80%;
+//       width: 100%;
+//       text-align: center;
+//       padding: 5rem 0;
+//       display: none;
+//       place-content: center;
+//       border-radius: 5px;
+//       box-shadow: 0 5px 5px rgba(#ccc, 0.2);
+//     }
+
+//     & li {
+//       list-style: none;
+//       margin: 1rem 0;
+//       & a {
+//         font-size: 1.2rem;
+//         text-decoration: none;
+//         color: $GrayishBlue;
+//         position: relative;
+//         &::after {
+//           content: "";
+//           position: absolute;
+//           height: 5px;
+//           background-image: linear-gradient(to left, $LimeGreen, $BrightCyan);
+//           width: 0%;
+//           bottom: -70%;
+//           left: 0;
+//         }
+//       }
+
+//       & a:hover {
+//         color: $DarkBlue;
+//         &::after {
+//           content: "";
+//           position: absolute;
+
+//           height: 5px;
+//           background-image: linear-gradient(to left, $LimeGreen, $BrightCyan);
+//           width: 100%;
+
+//           transition: all 0.5s;
+//         }
+//       }
+//     }
+//   }
+// }
+// header
+.header {
+  text-align: center;
+  padding-bottom: 5rem;
+  @include respond($tablet-port) {
+    height: 40rem;
+  }
+  &__container.container {
+    @include respond($tablet-port) {
+      margin: 0;
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+  &__container {
+    @include respond($tablet-port) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row-reverse;
+    }
+  }
+  &__img,
+  &__text {
+    @include respond($tablet-port) {
+      flex: 1;
+      // margin-left: -1rem;
+    }
+  }
+  &__img {
+    background-image: url(../images/bg-intro-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center -10rem;
+    background-size: 100% 100%;
+    height: 50rem;
+    @include respond($tablet-port) {
+      background-image: url(../images/bg-intro-desktop.svg);
+      background-position: center 0;
+      background-size: 100% 80%;
+      background-position: 100% -5%;
+    }
+    & img {
+      width: 100%;
+      // margin: 0 auto;
+      height: 100%;
+      object-fit: contain;
+      position: relative;
+      top: -10rem;
+      overflow: hidden;
+      @include respond($tablet-port) {
+        top: -3rem;
+      }
+      @include respond($tablet-land) {
+        transform: scaleY(1) translateY(1.5rem);
+      }
+    }
+  }
+  &__text {
+    margin-top: -5rem;
+    text-align: center;
+    @include respond($tablet-port) {
+      margin: 0;
+      text-align: left;
+      padding: 1rem;
+      margin-right: 1rem;
+    }
+    & h1 {
+      font-weight: 600;
+    }
+    & p {
+      color: $GrayishBlue;
+    }
+  }
+}
+
+.why {
+  background-color: $LightGrayishBlue;
+  text-align: center;
+  padding: 5rem 0;
+  @include respond($tablet-land) {
+    padding-top: 6rem;
+    text-align: left;
+  }
+  @include respond($tablet-land) {
+    padding-top: 8rem;
+  }
+  & .heading {
+    font-weight: 300;
+    width: 20rem;
+    text-align: center;
+    margin: 1rem auto;
+    @include respond($tablet-land) {
+      width: 100%;
+      margin: 0;
+      text-align: left;
+    }
+  }
+  & p {
+    color: $GrayishBlue;
+  }
+  // &__head {
+  // }
+}
+
+.latest {
+  text-align: center;
+  padding-bottom: 4rem;
+  background-color: $VeryLightGray;
+  &__container {
+    padding: 1rem;
+  }
+  & .card {
+    text-align: left;
+    overflow: hidden;
+    border: 1px solid transparent;
+    border-radius: 0.6rem;
+    margin: 1.5rem auto;
+    padding: 0;
+    max-width: 35rem;
+    @include respond($tablet-port) {
+      max-width: 28rem;
+    }
+    // height: 40rem;
+    box-shadow: 0 2px 2px rgba(#000, 0.1);
+    &__head {
+      & img {
+        width: 100%;
+        height: 20rem;
+        // height: auto;
+      }
+    }
+
+    &__body {
+      padding: 1.2rem 2rem 2rem;
+      background-color: $White;
+      & h3 {
+        font-size: 1rem;
+        font-weight: normal;
+        color: $GrayishBlue;
+      }
+      & h1 {
+        font-weight: 100;
+        &:hover {
+          color: $LimeGreen;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  color: #fff;
+
+  background-color: $DarkBlue;
+  justify-items: center;
+
+  text-align: center;
+  padding: 1.5rem 1rem 5rem;
+  & .container {
+    @include respond($tablet-port) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  & .item {
+    padding: 0.5rem 0 0;
+    margin: 1.5rem 0;
+    &:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 6rem;
+      @include respond($tablet-port) {
+        height: 10rem;
+      }
+    }
+    &__link--wrap {
+      & li {
+        list-style: none;
+        margin: 1rem 0;
+      }
+      & li a {
+        color: $LightGrayishBlue;
+        text-decoration: none;
+        font-size: 1.4rem;
+        @include respond($tablet-port) {
+          text-align: left;
+        }
+        &:hover {
+          color: $LimeGreen;
+        }
+      }
+    }
+  }
+}
+
+.social__icons {
+  & svg {
+    margin: 0 0.3rem;
+    &:hover path {
+      color: $LimeGreen;
+      fill: $LimeGreen;
+      transform: translateY(2px);
+      transition: all 0.2s;
+      // background-color: red;
+    }
+  }
+}

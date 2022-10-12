@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @include respond($tablet-port) {
+    font-size: 65%;
+  }
+}
+body {
+  font-family: "Public Sans", sans-serif;
+}
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+p {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+img {
+  max-width: 100%;
+}
