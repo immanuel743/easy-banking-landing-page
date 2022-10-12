@@ -15,3 +15,6 @@
 .DS_Store
 .README.md
 /.vscode
+/design
+README.md
+style-guide.md
