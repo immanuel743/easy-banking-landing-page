@@ -17,20 +17,90 @@ html {
 }
 
 body {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Public Sans", sans-serif;
 }
 
 h1 {
-  font-family: "Overpass", sans-serif;
   font-size: 2.2rem;
+  font-weight: 700;
 }
 
 p {
   font-size: 1.6rem;
+  font-weight: 400;
 }
 
 img {
   max-width: 100%;
+}
+
+.nav {
+  display: flex;
+  height: 6rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(0deg, 0%, 100%);
+  position: relative;
+  z-index: 10;
+  padding: 1rem 2rem;
+}
+.nav__item {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+@media screen and (max-width: 600px) {
+  .nav__item {
+    position: absolute;
+    top: 6rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: hsl(0deg, 0%, 100%);
+    width: 80%;
+    display: none;
+    text-align: center;
+    height: 25rem;
+    padding: 3rem 0;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.9);
+  }
+}
+.nav__item li {
+  list-style: none;
+}
+.nav__item li:hover {
+  transform: scale(1.2);
+}
+@media screen and (max-width: 600px) {
+  .nav__item li {
+    margin: 1rem 0;
+  }
+}
+.nav__item li a {
+  text-decoration: none;
+  color: hsl(233deg, 26%, 24%);
+  font-size: 1.2rem;
+  position: relative;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .nav__item li a {
+    font-size: 2rem;
+  }
+}
+.nav__item li a:hover::after {
+  content: "";
+  background: hsl(136deg, 65%, 51%);
+  height: 0.3rem;
+  width: 100%;
+  position: absolute;
+  top: 3.1rem;
+  left: 0;
+  transition: 0.2s;
+}
+@media screen and (max-width: 37.5em) {
+  .nav__item li a:hover::after {
+    display: none;
+  }
 }
 
 .header {
@@ -247,75 +317,6 @@ img {
   transition: all 0.2s;
 }
 
-.nav {
-  display: flex;
-  height: 6rem;
-  align-items: center;
-  justify-content: space-between;
-  background-color: hsl(0deg, 0%, 100%);
-  position: relative;
-  z-index: 10;
-  padding: 1rem 2rem;
-}
-.nav__item {
-  display: flex;
-  justify-content: space-between;
-  width: 40%;
-}
-@media screen and (max-width: 600px) {
-  .nav__item {
-    position: absolute;
-    top: 6rem;
-    left: 50%;
-    transform: translate(-50%, 0);
-    background-color: hsl(0deg, 0%, 100%);
-    width: 80%;
-    display: none;
-    text-align: center;
-    height: 25rem;
-    padding: 3rem 0;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.9);
-  }
-}
-.nav__item li {
-  list-style: none;
-}
-.nav__item li:hover {
-  transform: scale(1.2);
-}
-@media screen and (max-width: 600px) {
-  .nav__item li {
-    margin: 1rem 0;
-  }
-}
-.nav__item li a {
-  text-decoration: none;
-  color: hsl(233deg, 26%, 24%);
-  font-size: 1.2rem;
-  position: relative;
-  cursor: pointer;
-}
-@media screen and (max-width: 600px) {
-  .nav__item li a {
-    font-size: 2rem;
-  }
-}
-.nav__item li a:hover::after {
-  content: "";
-  background: hsl(136deg, 65%, 51%);
-  height: 0.3rem;
-  width: 100%;
-  position: absolute;
-  top: 3.1rem;
-  left: 0;
-  transition: 0.2s;
-}
-@media screen and (max-width: 37.5em) {
-  .nav__item li a:hover::after {
-    display: none;
-  }
-}
-
 .close {
   display: none;
 }
@@ -344,12 +345,14 @@ img {
 .heading {
   margin: 0.5rem 0;
   color: hsl(233deg, 26%, 24%);
+  font-family: "Public Sans", sans-serif;
 }
 
 .paragraph {
   -moz-columns: hsl(233deg, 8%, 62%);
        columns: hsl(233deg, 8%, 62%);
   line-height: 1.5;
+  font-family: "Public Sans", sans-serif;
 }
 
 .btn {
