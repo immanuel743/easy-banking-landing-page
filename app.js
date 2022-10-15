@@ -8,17 +8,17 @@ hamburger.addEventListener("click", () => {
   menu.classList.add("active");
   overlay.classList.remove("hidden");
   close.classList.add("active");
-  hamburger.style.display = "none";
+
+  hamburger.classList.add("hide");
 });
 close.addEventListener("click", () => {
   menu.classList.remove("active");
   overlay.classList.add("hidden");
   close.classList.toggle("active");
-  hamburger.style.display = "block";
+  hamburger.classList.remove("hide");
 });
 
 window.addEventListener("click", (e) => {
-  console.log(e.target);
   if (e.target == overlay) {
     menu.classList.remove("active");
     overlay.classList.add("hidden");
