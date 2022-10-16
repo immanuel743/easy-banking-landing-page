@@ -58,7 +58,7 @@ bar by learing a few tricks(i know right kind of funny 😂 that i never really 
 relied on codes on the web or bootstrap components 😪 to do that) i also learnt how to access an event with the target
 property to close the mobile navigation if the event.target is the overlay😎. Also added some minute animation on the
 navigation links in the mobile menu and also a little helper that allow you to close the mobile menu by just clicking on
-any part of the document(mobile though)
+any part of the document(mobile though).But that nav bar gave me a hard time.
 
 ### Continued development
 
