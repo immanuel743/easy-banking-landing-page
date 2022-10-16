@@ -67,14 +67,29 @@
     }
   }
   &__body {
-    @include respond($tablet-port) {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      justify-items: center;
-      flex-wrap: wrap;
-      text-align: left;
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-gap: 10px;
+    text-align: left;
+    // background-color: red;
+    // @include respond($tablet-port) {
+    //   display: grid;
+    //   grid-template-columns: repeat(2, 1fr);
+    //   grid-gap: 10px;
+    //   text-align: left;
+    // }
+    // @include respond($tablet-land) {
+    //   display: grid;
+    //   grid-template-columns: repeat(3, 1fr);
+    //   grid-gap: 10px;
+    //   text-align: left;
+    // }
+    // @include respond($laptop) {
+    //   display: grid;
+    //   grid-template-columns: repeat(auto-fit,minmax(35rem,1fr));
+    //   grid-gap: 10px;
+    //   text-align: left;
+    // }
   }
 }
 // navigation
