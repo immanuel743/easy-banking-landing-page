@@ -38,8 +38,8 @@
     max-width: 28rem;
   }
   margin: 0 auto;
-  &__head {
-  }
+  // &__head {
+  // }
   &__body {
     padding: 0 1rem;
     & h1 {
@@ -67,29 +67,18 @@
     }
   }
   &__body {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-    grid-gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     text-align: left;
-    // background-color: red;
-    // @include respond($tablet-port) {
-    //   display: grid;
-    //   grid-template-columns: repeat(2, 1fr);
-    //   grid-gap: 10px;
-    //   text-align: left;
-    // }
-    // @include respond($tablet-land) {
-    //   display: grid;
-    //   grid-template-columns: repeat(3, 1fr);
-    //   grid-gap: 10px;
-    //   text-align: left;
-    // }
-    // @include respond($laptop) {
-    //   display: grid;
-    //   grid-template-columns: repeat(auto-fit,minmax(35rem,1fr));
-    //   grid-gap: 10px;
-    //   text-align: left;
-    // }
+    @include respond($tablet-port) {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      justify-items: center;
+      flex-wrap: wrap;
+      text-align: left;
+    }
   }
 }
 // navigation
